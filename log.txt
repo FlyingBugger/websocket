@@ -1,0 +1,41 @@
+oCgvkswJhz1jkWQnWqdE3u8PDhic
+SELECT id,item,wechat_id,max(vcount) from tp_vote_item where wechat_id="oCgvkswJhz1jkWQnWqdE3u8PDhic"
+
+
+select count(vid) from ( select vid,item,id,max(vcount) from tp_vote_item GROUP BY wechat_id ORDER BY max(vcount) desc) as f
+
+select * from (select * from tp_vote_item ORDER BY vcount desc) as b GROUP  by wechat_id ORDER BY vcount desc
+
+array(3) {
+  [0]=>
+  array(1) {
+    ["resource"]=>
+    resource(4) of type (Socket)
+  }
+  [7]=>
+  array(5) {
+    ["resource"]=>
+    resource(7) of type (Socket)
+    ["uname"]=>
+    string(12) "userF9B7487D"
+    ["handshake"]=>
+    bool(true)
+    ["ip"]=>
+    string(9) "127.0.0.1"
+    ["port"]=>
+    int(4197)
+  }
+  [10]=>
+  array(5) {
+    ["resource"]=>
+    resource(10) of type (Socket)
+    ["uname"]=>
+    string(12) "userC78AB011"
+    ["handshake"]=>
+    bool(true)
+    ["ip"]=>
+    string(9) "127.0.0.1"
+    ["port"]=>
+    int(4202)
+  }
+}
